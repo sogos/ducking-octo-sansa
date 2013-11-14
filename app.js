@@ -11,8 +11,14 @@ app.set("twig options", {
 
 app.set('views', __dirname + '/views')
 app.use(express.static(__dirname + '/public'));
-app.set('view engine', 'twig')
-app.use(express.logger('dev'))
+app.set('view engine', 'twig');
+app.use(express.logger('dev'));
+app.use(express.cookieParser('tobo!'));
+app.use(express.cookieSession({ secret: 'tobo!'}));
+app.use(app.router);
+app.use(express.compress());
+app.use(express.methodOverride());
+app.use(express.bodyParser());
 
 app.use(express.favicon());
 
