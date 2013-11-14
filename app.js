@@ -27,10 +27,19 @@ app.set("view options", { layout: false });
 app.set('title', 'Sogox Project');
 
 
+app.get('/pages/*', function(req, res, next){
+    res.render('homepage/index.twig', { url: req.url });
+    return;
+});
+app.get('/api/*', function(req, res, next){
+    return res.json({ txt: 'plop' });
+});
+
 app.get('*', function(req, res, next){
     res.render('homepage/index.twig', { url: req.url });
     return;
 });
+
 
 
 // app.use(function(req, res, next){

@@ -17,12 +17,18 @@ Twig.cache = true;
 
     crossroads.addRoute('/toto', function(){
         // Load notes page
-        var template = twig({ref: "toto"})
-        , output = template.render({json:true,
-                                  count: supercount
+        var template = twig({ref: "toto"});
+        var url = api_base + '/test';
+        $.getJSON(url, function(data) {
+            var output = template.render({json:true,
+              count: supercount,
+              data: data
+          });
+
+            $("#noteApp").html(output);
         });
         supercount++;
-        $("#noteApp").html(output);
+
     });
 
     crossroads.addRoute('/notes', function(){
@@ -129,7 +135,7 @@ Twig.cache = true;
             var State = History.getState()
             , hash = State.hash;
 
-            console.log(hash);
+            //console.log(hash);
             // Trigger router
             crossroads.parse(hash);
         });
