@@ -1,0 +1,33 @@
+{
+  "name": "ducking-octo-sansa",
+  "description": "O_o",
+  "version": "0.0.1",
+  "author": "Thibault CORDIER <thibault.cordier@gmail.com>",
+  "contributors": [
+  ],
+  "dependencies": {
+    "express": "3.4.*",
+    "twig": "*",
+    "crossroads": "*"
+  },
+  "devDependencies": {
+  },
+  "keywords": [
+    "express",
+    "framework",
+    "web",
+    "rest",
+    "restful",
+    "router",
+    "app",
+    "api"
+  ],
+  "repository": "github.com/sogos/ducking-octo-sansa",
+  "main": "index",
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  }
+}
