@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="content">
+    <div>
+       <h3><a href="/post/{{ post.id }}">{{ post.title }}</a></h3> {{ post.createdAt|date('d/m/Y') }}
+       <p>{{ post.content}}</p>
+   </div>
+</div>
+{% endblock %}

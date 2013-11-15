@@ -3,15 +3,15 @@
   "description": "O_o",
   "version": "0.0.1",
   "author": "Thibault CORDIER <thibault.cordier@gmail.com>",
-  "contributors": [
-  ],
+  "contributors": [],
   "dependencies": {
     "express": "3.4.*",
     "twig": "*",
-    "crossroads": "*"
+    "crossroads": "*",
+    "mysql": "~2.0.0-alpha9",
+    "sequelize": "~2.0.0-beta.1"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "keywords": [
     "express",
     "framework",

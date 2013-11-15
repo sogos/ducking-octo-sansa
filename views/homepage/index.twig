@@ -2,6 +2,11 @@
 
 {% block body %}
 <div class="content">
-    Loading... <span class="glyphicon glyphicon-time"></span>
+{% for post in posts %}
+<div>
+ <h3><a href="/post/{{ post.id }}">{{ post.title }}</a></h3> {{ post.createdAt|date('d/m/Y') }}
+ <p>{{ post.content}}</p>
+</div>
+{% endfor %}
 </div>
 {% endblock %}
